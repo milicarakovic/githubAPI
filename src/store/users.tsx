@@ -61,7 +61,7 @@ const getUsersAsyncAction = (searchQuery: string | null) => async (
         //   )
         // ).filter((user) => user != null) as User[];
         // dispatch(setUsersAction(newUsersArray));
-        
+
         dispatch(setUsersAction(users));
 
         const limit = await GetRateLimit();

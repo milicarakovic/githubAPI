@@ -194,7 +194,7 @@ function ReposPage() {
         : repos && (
             <Grid item xs={12} className={classes.itemGrid}>
               <label className={classes.alert}>
-                There are no repositoriums available at the moment.
+                There are no repositories available for this user.
               </label>
             </Grid>
           )}

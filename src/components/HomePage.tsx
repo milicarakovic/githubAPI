@@ -16,7 +16,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import TextTruncate from 'react-text-truncate';
+// import TextTruncate from 'react-text-truncate';
 import { Limit } from '../models/Limit';
 import { User } from '../models/User';
 import { RootState } from '../store';
@@ -94,7 +94,7 @@ function HomePage() {
                           {user.login}
                         </Typography>
                       </CardContent>
-                      <CardContent>
+                      {/* <CardContent>
                         <Typography
                           variant="body2"
                           component="p"
@@ -116,7 +116,7 @@ function HomePage() {
                             />
                           )}
                         </Typography>
-                      </CardContent>
+                      </CardContent> */}
                       <CardActions disableSpacing>
                         <Button
                           variant="contained"
@@ -235,6 +235,9 @@ const useStyles = makeStyles(() =>
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
+      '&:hover': {
+        background: 'rgb(55,0,179, 0.3)',
+      },
     },
   })
 );

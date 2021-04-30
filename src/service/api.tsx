@@ -9,7 +9,7 @@ export async function GetUsers(searchQuery: String): Promise<User[]> {
   const result = await request('GET /search/users', {
     q: `${searchQuery} in:login`,
     page: 1,
-    per_page: 10,
+    per_page: 20,
   });
 
   if (result.status === 200) {
