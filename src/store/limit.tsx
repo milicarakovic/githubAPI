@@ -3,7 +3,14 @@ import { Limit } from '../models/Limit';
 import { GetRateLimit } from '../service/api';
 import { errorActions } from './error';
 
-export const limitReducer = (state = [], action: any) => {
+const initialLimitState = new Limit(-1, -1, -1);
+
+type LimitActions = { type: 'SET_LIMIT'; data: Limit };
+
+export const limitReducer = (
+  state = initialLimitState,
+  action: LimitActions
+) => {
   switch (action.type) {
     case 'SET_LIMIT':
       return action.data;

@@ -29,7 +29,7 @@ function ReposPage() {
   const { username } = useParams<ParamTypes>();
   const classes = useStyles();
   const dispatch = useDispatch();
-  const repos: Repo[] = useSelector((state: any) => state.repos);
+  const repos: Repo[] = useSelector((state: any) => state.repos.repos);
   const user: User = useSelector((state: any) => state.users?.currentUser);
 
   useEffect(() => {

@@ -1,4 +1,6 @@
-export const errorReducer = (state = '', action: any) => {
+type errorActions = { type: 'SET_ERROR'; data: String };
+
+export const errorReducer = (state = '', action: errorActions) => {
   switch (action.type) {
     case 'SET_ERROR':
       return action.data;
